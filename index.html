@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        const getProducts=async()=>{
+            let res=await fetch('https://dummyjson.com/products');
+            res=await res.json();
+            // console.log(res.products);
+            
+            for(let i=0;i<res.products.length;i++){
+                    console.log(res.products[i].title)
+                    var title=document.createElement('h2');
+                    var price=document.createElement('h4');
+                    var desc=document.createElement('p');
+                    var brand=document.createElement('h3');
+                    var image=document.createElement('img');
+                    var button=document.createElement('button');
+
+
+                    title.textContent=res.products[i].title;
+                    price.textContent="$." + res.products[i].price;
+                    desc.textContent=res.products[i].description;
+                    brand.textContent=res.products[i].brand;
+                    button.textContent='Buy Now';
+                    image.src=res.products[i].thumbnail;
+                    document.getElementById('product').style.marginBottom='50'
+
+                    document.getElementById('product').appendChild(image);
+                    document.getElementById('product').appendChild(title);
+                    document.getElementById('product').appendChild(price);
+                    document.getElementById('product').appendChild(desc);
+                    document.getElementById('product').appendChild(brand);
+                    document.getElementById('product').appendChild(button);
+            }
+        }
+        getProducts();
+    </script>
+</head>
+<body>
+    <h1 onclick="getProducts()">List of All products avialable with us.</h1>
+    <div class="final">
+        <div class="pr" id="product">
+        </div>
+        <hr/>
+    </div>
+</body>
+</html>

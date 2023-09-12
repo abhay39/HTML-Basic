@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <h1>Google chrome</h1>
+        <p>Google chrome is a free open source web browser developed by Google.</p>
+    </article>
+
+    <p>My family visited the ecpot center this summer.</p>
+    <aside>
+        <h1>Google chrome</h1>
+        <p>Google chrome is a free open source web browser developed by Google.</p>
+    </aside>
+
+    <audio controls>
+        <source src="song.ogg" type="audio/ogg">
+        <source src="song.mp3" type="audio/mp3">
+    </audio>
+
+    <canvas id="myCanvas">
+        Your browser doesnot support the HTML canvas tag.
+    </canvas>
+
+    <h2>Details</h2>
+    <details>
+        <summary>Click to expand</summary>
+        This is hidden content that can be shown or hidden.
+    </details>
+
+    <h2>Data List</h2>
+    <label for="fruits">Choose a browser:</label>
+    <input list="fruits" name="fruit">
+    <datalist  id="fruits">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="UC Browser">
+    </datalist>
+
+    <div style="display: grid; place-items: center;  border-radius: 20%; ">
+        <img src="g.png" alt="photo" style="height: 300px; width: 300px;"/>
+    </div>
+    <meter value="60" min="0" max="100">6 out of 10</meter>
+
+    <h1>Download Progress</h1>
+    <progress value="50" max="100"> </progress>
+
+    <footer style="background-color: mediumpurple;color: beige; padding: 10px; border-radius: 10px;text-align: center;">
+        <h1>&copy; Abhay Kumar Gupta</h1>
+    </footer>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+    </script>
+</body>
+</html>

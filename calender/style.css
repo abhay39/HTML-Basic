@@ -1,0 +1,40 @@
+.calendar {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid black;
+  }
+  
+  .calendar-header {
+    background-color: #ccc;
+    padding: 10px;
+  }
+  
+  .calendar-controls {
+    float: right;
+  }
+  
+  .calendar-week-days {
+    background-color: #eee;
+    padding: 10px 0;
+  }
+  
+  .calendar-days {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .calendar-day {
+    width: 14%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  .calendar-day:hover {
+    background-color: #ddd;
+  }
+  
+  .calendar-day.today {
+    background-color: #f00;
+  }
+  

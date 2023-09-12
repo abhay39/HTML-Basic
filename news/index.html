@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Tak News</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        #cards{
+            cursor: pointer;
+            
+            max-width: 450px;
+            /* margin-bottom: 60px; */
+            padding: 10px;
+            /* margin-top: 30px; */
+
+            box-shadow: 0px 5px 5px 5px rgb(107, 106, 106);
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+
+        }
+        h2{
+            text-align: center;
+        }
+        hr{
+            margin-bottom: 10px;
+        }
+        img{
+            width:  450px;
+            object-fit: cover;
+            height: 300px;
+        }
+        h4{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        header{
+            background-color: cadetblue;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        li{
+            display: flex;
+            cursor: pointer;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+    <script type="text/javascript">
+        //  creating elements 
+        const getNews=async()=>{
+            let res=await fetch("https://inshortsapi.vercel.app/news?category=all");
+            res=await res.json();
+            console.log(res.data)
+            const size=res.data.length;
+            for(let i=0;i<res.data.length;i++){
+                var div=document.createElement('div')
+                var a=document.createElement('img')
+                var b=document.createElement('h2')
+                var d=document.createElement('p')
+                var c=document.createElement('h4')
+                var e=document.createElement('hr')
+
+                a.src=res.data[i].imageUrl;
+                b.textContent=res.data[i].title;
+                c.textContent=res.data[i].content;
+                d.textContent="Author : "+res.data[i].author;
+
+                document.getElementById('cards').appendChild(a);
+                document.getElementById('cards').appendChild(b);
+                document.getElementById('cards').appendChild(c);
+                document.getElementById('cards').appendChild(d);
+                document.getElementById('cards').appendChild(e);
+            }
+
+        }
+        getNews();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Entertainment News</li>
+                <li>Sport News</li>
+                <li>Health News</li>
+                <li>About</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <div id="cards">
+            
+        </div>
+    </div>
+</body>
+</html>

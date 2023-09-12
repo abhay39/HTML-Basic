@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo</title>
+    <style>
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        ul, li {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        li:hover{
+            transition: 0.9s ease-in-out;
+            text-decoration: underline red;
+        }
+        img{
+            border-radius: 50px;
+            object-fit: cover;
+            padding: 5px;
+            cursor: pointer;
+        }
+        img:hover{
+            box-shadow: 0px 5px 5px 5px gray;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" height="100" width="200" style="border-radius: 10px; " />
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>About Us</li>
+                <li>Programm</li>
+                <li>Help?</li>
+            </ul>
+        </nav>
+    </header>
+    <hr/>
+    <div style="display: flex; justify-content: space-around;">
+        <div> 
+            <img src="https://images.static-collegedunia.com/public/college_data/images/campusimage/149543439833.jpg" alt="photo" width="500" height="500"/>
+        </div>
+        <div> 
+            <img src="https://images.static-collegedunia.com/public/college_data/images/campusimage/149543439833.jpg" alt="photo" width="500" height="500"/>
+        </div>
+        
+    </div>
+</body>
+</html>

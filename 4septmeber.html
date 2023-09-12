@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #cc0a0a;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            background-color: #d1cece;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+        
+        audio{
+            background-color: rebeccapurple;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        audio, video {
+            margin: 10px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 5px 5px 5px 5px rgb(104, 104, 104);
+        }
+
+        details {
+            margin: 20px;
+        }
+
+        canvas {
+            border: 1px solid #000;
+        }
+        footer{
+            background-color: cyan;
+            text-align: center;
+            padding: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header >
+        <h1>Cap 808</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Audio and Video</h2>
+
+        <audio controls>
+            <source src="song.mp3" type="audio/mpeg">
+        </audio>
+        <br/>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <h2>Meter</h2>
+        <meter value="60" min="0" max="100">6 out of 10</meter>
+
+        <h2>Details</h2>
+        <details>
+            <summary>Click to expand</summary>
+            This is hidden content that can be shown or hidden.
+        </details>
+
+        <h2>Data List</h2>
+        <label for="fruits">Choose a fruit:</label>
+        <input list="fruits" name="fruit">
+        <datalist  id="fruits">
+            <option value="Apple">
+            <option value="Banana">
+            <option value="Cherry">
+            <option value="Grapes">
+            <option value="Orange">
+        </datalist>
+
+        <h2>Canvas</h2>
+        <canvas id="myCanvas" width="400" height="200">
+            
+        </canvas>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 My Webpage</p>
+    </footer>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95,50,40,0,2*Math.PI);
+        ctx.stroke();
+    </script> 
+    
+
+</body>
+</html>
